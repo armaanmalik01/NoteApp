@@ -112,19 +112,23 @@ header #h-btns > div > button {
 	height:100vh;
 /*	display:grid; */ 
 	place-items:center;
-	position:absolute;
+	position:fixed;
 	top:0;
 	left:0;
 	backdrop-filter:blur(5px);
 	display:none;
-	z-index: 2;
+	z-index:2;
 }
 
 #new-note-parent > #new-note {
 	width:25rem;
+	transition: top 4s ease-in;
 	padding: 2em 1em;
-
+	position: relative;
+	bottom: -2%;
+	transition: all 200ms ease;
 }
+
 
 
 #new-note-parent > #new-note > #note-title > label {

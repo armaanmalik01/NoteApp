@@ -5,35 +5,25 @@ const savebtn = document.getElementById("save-btn");
 const popup = document.getElementById("new-note-parent");
 const title_input = document.getElementById("title");
 const body_input = document.getElementById("body");
-
-
-
-
-
-const notes = [
-	{
-		id:Date.now(),
-		title : "Pubg",
-		body : "this is the simulation game and does not represent real life so play and moderation"
-	}
-]
-
-
-function refresh() {
-
-
-}
-
+const new_note_box = document.getElementById("new-note");
 
 function cancel() {
 	popup.style.display = 'none';
 	title_input.value = '';
 	body_input.value = '';
+	document.body.style.height = 'auto';
+	document.body.style.overflow = 'auto'
+	new_note_box.style.bottom = "-2%";
 }
 
 
 function newnote() {
 	popup.style.display = 'grid';
+	setTimeout(()=>{
+		new_note_box.style.bottom = "0%";
+	},10)
+	document.body.style.height = '100vh';
+	document.body.style.overflow = 'hidden';
 
 }
 
